@@ -5,10 +5,10 @@ class StockContainer extends Component {
 
   render() {
     return (
-      <div>
+      <div >
         <h2>Stocks</h2>
         {
-          //render the list of stocks here
+          this.props.stock.map(stock => <Stock stock={stock} handleClick={this.props.handleClick}/>)
         }
       </div>
     );
